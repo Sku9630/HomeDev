@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomeDev - Developer Game 2D & Budaya Nusantara</title>
+    <title>HomeDev - Developer Game 2D</title>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -44,6 +44,14 @@
             font-weight: 700;
             color: #00d4ff;
             letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 35px;
+            width: auto;
         }
 
         nav a {
@@ -62,7 +70,7 @@
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.95)), 
-                        url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1350&q=80');
+                        url("images/hero.png");
             background-size: cover;
             background-position: center;
             display: flex;
@@ -314,9 +322,12 @@
 
 <body>
 
-    <!-- NAVIGASI KONSISTEN -->
+    <!-- NAVIGASI -->
     <header>
-        <div class="logo">HomeDev</div>
+        <div class="logo">
+            <img src="images/logo.png" alt="HomeDev Logo" onerror="this.style.display='none'">
+            HomeDev
+        </div>
         <nav>
             <a href="#" class="active">Home</a>
             <a href="games.html">Games</a>
@@ -330,10 +341,10 @@
     <section class="hero">
         <div>
             <h1>Creating Amazing <span>2D Games</span></h1>
-            <p>HomeDev adalah studio pengembang game 2D independen asal Ponorogo yang menghadirkan permainan ringan, seru, dan mengusung kekayaan budaya Nusantara.</p>
+            <p>HomeDev adalah developer game 2D Indonesia yang menghadirkan permainan ringan, seru, dan kreatif dengan sentuhan budaya Nusantara.</p>
             <div class="button">
-                <a href="#games" class="btn btn1">Lihat Game Kami</a>
-                <a href="#contact" class="btn btn2">Hubungi Kami</a>
+                <a href="games.html" class="btn btn1">Our Games</a>
+                <a href="#games" class="btn btn2">Download</a>
             </div>
         </div>
     </section>
@@ -341,13 +352,13 @@
     <!-- KATALOG GAME -->
     <section class="games-section" id="games">
         <h2 class="section-title">Game Buatan Kami</h2>
-        <p class="section-subtitle">Koleksi game 2D ringan dan menarik yang siap dimainkan</p>
+        <p class="section-subtitle">Koleksi game 2D seru buatan HomeDev</p>
         
         <div class="games-grid">
             
             <!-- Game 1 -->
             <div class="game-card">
-                <div class="game-img" style="background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80');">
+                <div class="game-img" style="background-image: url('images/reog-puzzle.jpg');">
                     <span class="badge">Puzzle</span>
                 </div>
                 <div class="game-info">
@@ -359,7 +370,7 @@
 
             <!-- Game 2 -->
             <div class="game-card">
-                <div class="game-img" style="background-image: url('https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80');">
+                <div class="game-img" style="background-image: url('images/game-reog-ponorogo.jpg');">
                     <span class="badge">Petualangan 2D</span>
                 </div>
                 <div class="game-info">
@@ -371,7 +382,7 @@
 
             <!-- Game 3 -->
             <div class="game-card">
-                <div class="game-img" style="background-image: url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80');">
+                <div class="game-img" style="background-image: url('images/ngebut-hindar.jpg');">
                     <span class="badge">Arcade / Action</span>
                 </div>
                 <div class="game-info">
@@ -386,25 +397,23 @@
 
     <!-- ABOUT SECTION -->
     <section class="about" id="about">
-        <h2 class="section-title">Selamat Datang di HomeDev</h2>
-        <p>Kami percaya bahwa game bukan hanya sekadar hiburan, tetapi juga media edukatif dan sarana kreatif untuk mengenalkan kebudayaan daerah ke tingkat yang lebih luas.</p>
-        <p>Setiap proyek game buatan HomeDev dirancang dengan gaya visual menarik, gameplay intuitif, serta peforma yang ringan agar dapat dimainkan dengan nyaman di berbagai perangkat.</p>
+        <h2 class="section-title">Welcome to HomeDev</h2>
+        <p>Kami percaya bahwa game bukan hanya hiburan, tetapi juga media untuk mengenalkan budaya Indonesia kepada dunia. Setiap game dibuat dengan desain modern, gameplay yang menyenangkan, dan performa ringan agar dapat dimainkan oleh semua orang.</p>
     </section>
 
     <!-- CONTACT & ADDRESS SECTION -->
     <section class="contact-section" id="contact">
-        <h2 class="section-title">Lokasi & Kontak</h2>
+        <h2 class="section-title">Alamat & Kontak</h2>
         <p class="section-subtitle">Kunjungi markas pengembangan kami atau hubungi tim HomeDev</p>
         
         <div class="contact-container">
             <div class="contact-card">
-                <h3>Alamat Studio</h3>
+                <h3>Studio HomeDev</h3>
                 <div class="address-box">
-                    <p><strong>HomeDev Studio</strong></p>
+                    <p><strong>Alamat Lengkap:</strong></p>
                     <p>Jln. Mlarak Pulung</p>
                     <p>Desa Suren, Kecamatan Mlarak</p>
                     <p>Kabupaten Ponorogo, Jawa Timur</p>
-                    <p>Indonesia</p>
                 </div>
             </div>
         </div>
@@ -412,9 +421,9 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 HomeDev. All Rights Reserved.</p>
+        <p>© 2026 HomeDev. All Rights Reserved.</p>
     </footer>
 
 </body>
-  </html>
-  
+    </html>
+    

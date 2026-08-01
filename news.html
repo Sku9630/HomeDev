@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News - HomeDev</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f172a;
+color:#fff;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.5);
+backdrop-filter:blur(12px);
+z-index:999;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#00d4ff;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00d4ff;
+}
+
+.hero{
+padding:140px 20px 70px;
+text-align:center;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.hero p{
+color:#cbd5e1;
+font-size:18px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:60px 20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.card{
+background:#1e293b;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.35);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.content{
+padding:25px;
+}
+
+.date{
+color:#00d4ff;
+font-size:14px;
+margin-bottom:10px;
+}
+
+.content h2{
+margin-bottom:15px;
+}
+
+.content p{
+line-height:1.8;
+color:#d1d5db;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#00d4ff;
+color:#000;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+footer{
+background:#020617;
+padding:25px;
+text-align:center;
+color:#94a3b8;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+nav{
+display:none;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">HomeDev</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="games.html">Games</a>
+<a href="about.html">About</a>
+<a href="news.html">News</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Latest News</h1>
+
+<p>Ikuti berita terbaru dan pembaruan game dari HomeDev.</p>
+
+</section>
+
+<div class="container">
+
+<div class="card">
+
+<img src="images/news1.jpg">
+
+<div class="content">
+
+<div class="date">1 Agustus 2026</div>
+
+<h2>REOG PUZZLE Resmi Dirilis</h2>
+
+<p>
+Game REOG PUZZLE kini telah tersedia. Nikmati permainan puzzle bertema budaya Reog Ponorogo dengan gameplay ringan dan menyenangkan.
+</p>
+
+<a href="#" class="btn">Read More</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/news2.jpg">
+
+<div class="content">
+
+<div class="date">Coming Soon</div>
+
+<h2>Game Baru Sedang Dikembangkan</h2>
+
+<p>
+HomeDev sedang menyiapkan game 2D terbaru dengan konsep yang lebih seru, menantang, dan tetap ringan dimainkan di berbagai perangkat.
+</p>
+
+<a href="#" class="btn">Read More</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/news3.jpg">
+
+<div class="content">
+
+<div class="date">Update</div>
+
+<h2>Peningkatan Performa</h2>
+
+<p>
+Kami terus meningkatkan kualitas game dengan perbaikan bug, optimasi performa, dan penambahan fitur baru untuk pengalaman bermain yang lebih baik.
+</p>
+
+<a href="#" class="btn">Read More</a>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 HomeDev. All Rights Reserved.
+
+</footer>
+
+</body>
+</htm

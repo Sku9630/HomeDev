@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HomeDev - Developer Game 2D</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(12px);
+z-index:999;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#00d4ff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00d4ff;
+}
+
+.hero{
+
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
+url("images/hero.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+padding:20px;
+}
+
+.hero h1{
+font-size:65px;
+margin-bottom:20px;
+}
+
+.hero span{
+color:#00d4ff;
+}
+
+.hero p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+line-height:1.8;
+opacity:.9;
+}
+
+.button{
+
+margin-top:40px;
+
+display:flex;
+justify-content:center;
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:15px 35px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.btn1{
+background:#00d4ff;
+color:#111;
+}
+
+.btn2{
+border:2px solid white;
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+.about{
+
+padding:90px 8%;
+
+background:#111827;
+
+text-align:center;
+
+}
+
+.about h2{
+
+font-size:42px;
+
+margin-bottom:25px;
+
+}
+
+.about p{
+
+max-width:900px;
+
+margin:auto;
+
+line-height:2;
+
+font-size:18px;
+
+opacity:.9;
+
+}
+
+footer{
+
+padding:25px;
+
+background:#020617;
+
+text-align:center;
+
+color:#aaa;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+HomeDev
+</div>
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#">Games</a>
+
+<a href="#">News</a>
+
+<a href="#">About</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>
+
+Creating Amazing <span>2D Games</span>
+
+</h1>
+
+<p>
+
+HomeDev adalah developer game 2D Indonesia yang menghadirkan permainan ringan, seru, dan kreatif dengan sentuhan budaya Nusantara.
+
+</p>
+
+<div class="button">
+
+<a href="#" class="btn btn1">
+Our Games
+</a>
+
+<a href="#" class="btn btn2">
+Download
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="about">
+
+<h2>
+
+Welcome to HomeDev
+
+</h2>
+
+<p>
+
+Kami percaya bahwa game bukan hanya hiburan, tetapi juga media untuk mengenalkan budaya Indonesia kepada dunia. Setiap game dibuat dengan desain modern, gameplay yang menyenangkan, dan performa ringan agar dapat dimainkan oleh semua orang.
+
+</p>
+
+</section>
+
+<footer>
+
+© 2026 HomeDev. All Rights Reserved.
+
+</footer>
+
+</body>
+  </html>

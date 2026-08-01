@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomeDev - Developer Game 2D</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>HomeDev - Game Developer 2D</title>
+    <!-- Google Fonts untuk tampilan modern -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <style>
+        /* --- RESET & BASIC STYLES --- */
         * {
             margin: 0;
             padding: 0;
@@ -17,413 +17,250 @@
         }
 
         body {
-            background: #0f172a;
+            background-color: #0b132b;
             color: #ffffff;
-            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* --- HEADER & NAVIGATION --- */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- HEADER & NAVBAR --- */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            padding: 18px 8%;
+            background-color: rgba(11, 19, 43, 0.95);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(12px);
-            z-index: 999;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 25px;
         }
 
         .logo {
-            font-size: 28px;
-            font-weight: 700;
-            color: #00d4ff;
-            letter-spacing: 1px;
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #00d8ff;
         }
 
-        .logo img {
-            height: 35px;
-            width: auto;
+        .logo span {
+            color: #ffffff;
         }
 
-        nav a {
-            color: #e2e8f0;
-            text-decoration: none;
-            margin-left: 25px;
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
             font-weight: 500;
-            transition: all 0.3s ease;
+            color: #d1d5db;
+            transition: color 0.3s ease;
         }
 
-        nav a:hover, nav a.active {
-            color: #00d4ff;
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #00d8ff;
+        }
+
+        /* Hamburger Icon (Mobile) */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            transition: all 0.3s ease;
         }
 
         /* --- HERO SECTION --- */
         .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.95)), 
-                        url("images/hero.png");
-            background-size: cover;
-            background-position: center;
+            min-height: 100vh;
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 0 20px;
+            padding: 120px 20px 60px;
+            background: linear-gradient(180deg, rgba(11, 19, 43, 0.7) 0%, rgba(11, 19, 43, 1) 100%),
+                        radial-gradient(circle at center, rgba(0, 216, 255, 0.15) 0%, transparent 70%);
         }
 
         .hero h1 {
-            font-size: 56px;
-            margin-bottom: 20px;
+            font-size: 3rem;
+            font-weight: 800;
             line-height: 1.2;
+            margin-bottom: 20px;
+            max-width: 800px;
         }
 
-        .hero span {
-            color: #00d4ff;
+        .hero h1 span {
+            color: #00d8ff;
         }
 
         .hero p {
-            font-size: 18px;
-            max-width: 700px;
-            margin: 0 auto;
-            color: #cbd5e1;
+            font-size: 1.05rem;
+            color: #9ca3af;
+            max-width: 650px;
+            line-height: 1.6;
+            margin-bottom: 35px;
         }
 
-        .button {
-            margin-top: 35px;
+        .cta-buttons {
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            gap: 15px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .btn {
-            padding: 14px 32px;
-            border-radius: 50px;
-            text-decoration: none;
+            padding: 12px 32px;
+            border-radius: 30px;
             font-weight: 600;
+            font-size: 0.95rem;
             transition: all 0.3s ease;
-            display: inline-block;
+            cursor: pointer;
         }
 
-        .btn1 {
-            background: #00d4ff;
-            color: #0f172a;
-            box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+        .btn-primary {
+            background-color: #00d8ff;
+            color: #0b132b;
+            border: 2px solid #00d8ff;
         }
 
-        .btn2 {
-            border: 2px solid #ffffff;
+        .btn-primary:hover {
+            background-color: #00b4d8;
+            border-color: #00b4d8;
+            box-shadow: 0 0 15px rgba(0, 216, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
             color: #ffffff;
+            border: 2px solid #ffffff;
         }
 
-        .btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        .btn-secondary:hover {
+            background-color: #ffffff;
+            color: #0b132b;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         }
 
-        /* --- SECTION COMMONS --- */
-        section {
-            padding: 90px 8%;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 15px;
-            position: relative;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #94a3b8;
-            margin-bottom: 50px;
-            font-size: 16px;
-        }
-
-        /* --- GAMES SECTION --- */
-        .games-section {
-            background: #111827;
-        }
-
-        .games-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .game-card {
-            background: #1e293b;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .game-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-        }
-
-        .game-img {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: rgba(0, 212, 255, 0.9);
-            color: #0f172a;
-            padding: 4px 12px;
-            font-size: 12px;
-            font-weight: 700;
-            border-radius: 20px;
-            text-transform: uppercase;
-        }
-
-        .game-info {
-            padding: 25px;
-        }
-
-        .game-info h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #f8fafc;
-        }
-
-        .game-info p {
-            color: #94a3b8;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .btn-card {
-            display: block;
-            text-align: center;
-            padding: 10px;
-            background: transparent;
-            border: 1px solid #00d4ff;
-            color: #00d4ff;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .btn-card:hover {
-            background: #00d4ff;
-            color: #0f172a;
-        }
-
-        /* --- ABOUT SECTION --- */
-        .about {
-            background: #0f172a;
-            text-align: center;
-        }
-
-        .about p {
-            max-width: 850px;
-            margin: 0 auto 20px auto;
-            color: #cbd5e1;
-            font-size: 17px;
-            line-height: 1.8;
-        }
-
-        /* --- LOCATION & CONTACT --- */
-        .contact-section {
-            background: #111827;
-        }
-
-        .contact-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            justify-content: center;
-            align-items: stretch;
-        }
-
-        .contact-card {
-            background: #1e293b;
-            padding: 40px;
-            border-radius: 16px;
-            flex: 1;
-            min-width: 300px;
-            max-width: 500px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .contact-card h3 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #00d4ff;
-        }
-
-        .address-box {
-            margin-top: 15px;
-            color: #cbd5e1;
-            font-size: 15px;
-            line-height: 1.8;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            padding: 25px;
-            background: #020617;
-            text-align: center;
-            color: #64748b;
-            font-size: 14px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        /* --- RESPONSIVE MEDIA QUERIES --- */
-        @media(max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 15px;
-            }
-
-            nav {
+        /* --- RESPONSIVE MEDIA QUERIES (LAYAR HP) --- */
+        @media (max-width: 768px) {
+            .hamburger {
                 display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                margin-top: 15px;
             }
 
-            nav a {
-                margin: 5px 10px;
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #0b132b;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 25px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                display: none; /* Sembunyi secara default di HP */
+            }
+
+            .nav-links.active {
+                display: flex; /* Muncul saat hamburger diklik */
             }
 
             .hero h1 {
-                font-size: 38px;
+                font-size: 2.1rem;
             }
 
             .hero p {
-                font-size: 16px;
+                font-size: 0.95rem;
             }
 
-            section {
-                padding: 60px 6%;
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
             }
         }
     </style>
 </head>
-
 <body>
 
-    <!-- NAVIGASI -->
+    <!-- NAVBAR / HEADER -->
     <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="HomeDev Logo" onerror="this.style.display='none'">
-            HomeDev
-        </div>
-        <nav>
-            <a href="#" class="active">Home</a>
-            <a href="games.html">Games</a>
-            <a href="news.html">News</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <span>Home</span>Dev
+            </a>
+
+            <!-- Menu Komputer -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <!-- Tombol Hamburger Mobile -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
     <!-- HERO SECTION -->
     <section class="hero">
-        <div>
-            <h1>Creating Amazing <span>2D Games</span></h1>
-            <p>HomeDev adalah developer game 2D Indonesia yang menghadirkan permainan ringan, seru, dan kreatif dengan sentuhan budaya Nusantara.</p>
-            <div class="button">
-                <a href="games.html" class="btn btn1">Our Games</a>
-                <a href="#games" class="btn btn2">Download</a>
-            </div>
+        <h1>Creating Amazing <span>2D Games</span></h1>
+        <p>
+            HomeDev adalah developer game 2D Indonesia yang menghadirkan permainan ringan, seru, dan kreatif dengan sentuhan budaya Nusantara.
+        </p>
+        <div class="cta-buttons">
+            <a href="#" class="btn btn-primary">Our Games</a>
+            <a href="#" class="btn btn-secondary">Download</a>
         </div>
     </section>
 
-    <!-- KATALOG GAME -->
-    <section class="games-section" id="games">
-        <h2 class="section-title">Game Buatan Kami</h2>
-        <p class="section-subtitle">Koleksi game 2D seru buatan HomeDev</p>
-        
-        <div class="games-grid">
-            
-            <!-- Game 1 -->
-            <div class="game-card">
-                <div class="game-img" style="background-image: url('images/reog-puzzle.jpg');">
-                    <span class="badge">Puzzle</span>
-                </div>
-                <div class="game-info">
-                    <h3>Reog Puzzle</h3>
-                    <p>Uji ketangkasan dan logika Anda dalam menyusun puzzle interaktif bertema kesenian tradisional Reog Ponorogo.</p>
-                    <a href="#" class="btn-card">Mainkan Sekarang</a>
-                </div>
-            </div>
+    <!-- JAVASCRIPT UNTUK MENU HP -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
 
-            <!-- Game 2 -->
-            <div class="game-card">
-                <div class="game-img" style="background-image: url('images/game-reog-ponorogo.jpg');">
-                    <span class="badge">Petualangan 2D</span>
-                </div>
-                <div class="game-info">
-                    <h3>Game Reog Ponorogo</h3>
-                    <p>Jelajahi petualangan seru 2D mengendalikan karakter Singo Barong dan Bujang Ganong untuk menyelesaikan berbagai rintangan.</p>
-                    <a href="#" class="btn-card">Mainkan Sekarang</a>
-                </div>
-            </div>
-
-            <!-- Game 3 -->
-            <div class="game-card">
-                <div class="game-img" style="background-image: url('images/ngebut-hindar.jpg');">
-                    <span class="badge">Arcade / Action</span>
-                </div>
-                <div class="game-info">
-                    <h3>Ngebut Hindar</h3>
-                    <p>Aksi berkendara serba cepat! Uji refleks Anda dengan menghindari berbagai rintangan lalu lintas yang muncul mendadak.</p>
-                    <a href="#" class="btn-card">Mainkan Sekarang</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section class="about" id="about">
-        <h2 class="section-title">Welcome to HomeDev</h2>
-        <p>Kami percaya bahwa game bukan hanya hiburan, tetapi juga media untuk mengenalkan budaya Indonesia kepada dunia. Setiap game dibuat dengan desain modern, gameplay yang menyenangkan, dan performa ringan agar dapat dimainkan oleh semua orang.</p>
-    </section>
-
-    <!-- CONTACT & ADDRESS SECTION -->
-    <section class="contact-section" id="contact">
-        <h2 class="section-title">Alamat & Kontak</h2>
-        <p class="section-subtitle">Kunjungi markas pengembangan kami atau hubungi tim HomeDev</p>
-        
-        <div class="contact-container">
-            <div class="contact-card">
-                <h3>Studio HomeDev</h3>
-                <div class="address-box">
-                    <p><strong>Alamat Lengkap:</strong></p>
-                    <p>Jln. Mlarak Pulung</p>
-                    <p>Desa Suren, Kecamatan Mlarak</p>
-                    <p>Kabupaten Ponorogo, Jawa Timur</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 HomeDev. All Rights Reserved.</p>
-    </footer>
-
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
     </html>
-    
+                        

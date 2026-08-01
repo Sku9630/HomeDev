@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HomeDev | Our Games</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f172a;
+color:#fff;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.5);
+backdrop-filter:blur(12px);
+z-index:999;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#00d4ff;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+transition:.3s;
+font-weight:500;
+}
+
+nav a:hover{
+color:#00d4ff;
+}
+
+.hero{
+
+padding-top:130px;
+padding-bottom:70px;
+
+text-align:center;
+
+background:linear-gradient(135deg,#0f172a,#1e293b);
+
+}
+
+.hero h1{
+
+font-size:55px;
+
+}
+
+.hero p{
+
+margin-top:15px;
+
+font-size:18px;
+
+opacity:.8;
+
+}
+
+.search{
+
+display:flex;
+
+justify-content:center;
+
+margin-top:35px;
+
+}
+
+.search input{
+
+width:420px;
+
+max-width:90%;
+
+padding:15px 20px;
+
+border:none;
+
+outline:none;
+
+border-radius:40px;
+
+font-size:16px;
+
+}
+
+.games{
+
+padding:70px 8%;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+background:#1e293b;
+
+border-radius:20px;
+
+overflow:hidden;
+
+transition:.3s;
+
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card img{
+
+width:100%;
+
+height:190px;
+
+object-fit:cover;
+
+}
+
+.info{
+
+padding:20px;
+
+}
+
+.info h2{
+
+margin-bottom:10px;
+
+}
+
+.info p{
+
+color:#ccc;
+
+line-height:1.6;
+
+font-size:15px;
+
+}
+
+.rating{
+
+margin:15px 0;
+
+font-size:18px;
+
+color:#FFD700;
+
+}
+
+.buttons{
+
+display:flex;
+
+gap:10px;
+
+}
+
+.btn{
+
+flex:1;
+
+padding:12px;
+
+text-align:center;
+
+text-decoration:none;
+
+border-radius:30px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.detail{
+
+background:#00d4ff;
+
+color:#000;
+
+}
+
+.download{
+
+border:2px solid white;
+
+color:white;
+
+}
+
+.btn:hover{
+
+opacity:.85;
+
+}
+
+footer{
+
+padding:25px;
+
+text-align:center;
+
+background:#020617;
+
+color:#888;
+
+}
+
+@media(max-width:768px){
+
+nav{
+
+display:none;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">HomeDev</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="games.html">Games</a>
+<a href="about.html">About</a>
+<a href="news.html">News</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Our Games</h1>
+
+<p>Temukan game 2D terbaik dari HomeDev.</p>
+
+<div class="search">
+
+<input type="text" placeholder="Cari game...">
+
+</div>
+
+</section>
+
+<section class="games">
+
+<div class="card">
+
+<img src="images/reog-puzzle.jpg">
+
+<div class="info">
+
+<h2>REOG PUZZLE</h2>
+
+<p>Game puzzle bertema budaya Reog Ponorogo yang ringan dan menyenangkan.</p>
+
+<div class="rating">
+
+★★★★★
+
+</div>
+
+<div class="buttons">
+
+<a href="reog-puzzle.html" class="btn detail">Detail</a>
+
+<a href="#" class="btn download">Download</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/ngebut-hindar.jpg">
+
+<div class="info">
+
+<h2>NGEBUT HINDAR</h2>
+
+<p>Game balapan sederhana dengan gameplay yang cepat dan menantang.</p>
+
+<div class="rating">
+
+★★★★☆
+
+</div>
+
+<div class="buttons">
+
+<a href="ngebut-hindar.html" class="btn detail">Detail</a>
+
+<a href="#" class="btn download">Download</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/coming-soon.jpg">
+
+<div class="info">
+
+<h2>Coming Soon</h2>
+
+<p>Game terbaru dari HomeDev akan segera hadir.</p>
+
+<div class="rating">
+
+☆☆☆☆☆
+
+</div>
+
+<div class="buttons">
+
+<a href="#" class="btn detail">Soon</a>
+
+<a href="#" class="btn download">-</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 HomeDev. All Rights Reserved.
+
+</footer>
+
+</body>
+  </html>
